@@ -28,7 +28,7 @@ public class MainController {
     static String FAILED_RESPONSE = "ERROR";
 
     @PostMapping("/logSms")
-    public String creatToken(@RequestBody RequestBody request) throws Exception {
+    public String creatToken(@RequestBody String request) throws Exception {
        
         System.out.println("Request Reached at -> " + request);
        SmsPojo smsPojo = new Gson().fromJson(request.toString(),SmsPojo.class);
